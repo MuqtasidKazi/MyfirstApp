@@ -1,0 +1,41 @@
+#header{
+    height: 65px;
+}
+ion-button{
+    color: black;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(199, 199, 199);
+    height: 100vh;
+    width: 100%;
+}
+
+ion-item,ion-input{
+    margin: 20px;
+    --ion-background-color: #e4e4e4;
+}
+
+#main{
+    max-width: 650px;
+    border: 10px solid white;
+    border-radius: 20px;
+}
+
+@media (max-width: 650px) {
+    #main{
+        position: absolute;
+        top: 80px;
+    }
+    body{
+        background-color: #e4e4e4 ;
+    }
+    ion-item,ion-input{
+        --ion-background-color: #e4e4e4;
+    }
+}
+

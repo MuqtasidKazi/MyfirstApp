@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar id="header" color="dark"  class="ion-text-center">
+    <ion-title>Currency Converter</ion-title>
+  </ion-toolbar>
+</ion-header>
+<body>
+  <div id="main">
+    <ion-toolbar>
+      <ion-item>
+        <ion-select value="Rupees" okText="Okay" cancelText="Dismiss" [(ngModel)]="selected1"
+          [interfaceOptions]="customPopoverOptions" interface="popover">
+          <ion-select-option *ngFor="let sel1 of select1" [value]="sel1.currencyname">{{sel1.currencyname}}
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-input placeholder="Enter value" [(ngModel)]="Num1" (keyup)="check1(selected1,selected2)" value={{Num1}}>
+      </ion-input>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-item>
+        <ion-select value="Rupees" okText="Okay" cancelText="Dismiss" [(ngModel)]="selected2"
+          [interfaceOptions]="customPopoverOptions" interface="popover">
+          <ion-select-option *ngFor="let sel1 of select1" [value]="sel1.currencyname">{{sel1.currencyname}}
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-input placeholder="Enter value" [(ngModel)]="Num2" (keyup)="check2(selected1,selected2)" value={{Num2}}>
+      </ion-input>
+    </ion-toolbar>
+  </div>
+  <ion-button (click)="check1(selected1,selected2)" color="#c7c7c7"> Convert </ion-button>
+</body>
